@@ -1,0 +1,219 @@
+{
+  "info": {
+    "_postman_id": "9481ad3e-5a36-442b-bfa6-b1973887fdb4",
+    "name": "DoctorPatient",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32573084",
+    "_collection_link": "https://www.postman.com/shivansh1soni/workspace/postman-api-fundamentals-student-expert/collection/32573084-9481ad3e-5a36-442b-bfa6-b1973887fdb4?action=share&source=collection_link&creator=32573084"
+  },
+  "item": [
+    {
+      "name": "Get All Doctors",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/doctors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doctors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Doctor",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/doctors/12",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doctors",
+            "12"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Doctor by Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/doctors/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doctors",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Doctor",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Dr. Yashee Singh\",\r\n    \"city\": \"DELHI\",\r\n    \"email\": \"yashee@gmail.com\",\r\n    \"phoneNumber\": \"6855774412\",\r\n    \"speciality\": \"ORTHOPAEDIC\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/doctors",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "doctors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Patient",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Apeksha Singh\",\r\n    \"city\": \"NOIDA\",\r\n    \"email\": \"apeksha@gmail.com\",\r\n    \"phoneNumber\": \"4477885599\",\r\n    \"symptom\": \"ARTHRITIS\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/patients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "patients"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Patient",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Apeksha Singh\",\r\n    \"city\": \"NOIDA\",\r\n    \"email\": \"apeksha@gmail.com\",\r\n    \"phoneNumber\": \"4477885599\",\r\n    \"symptom\": \"ARTHRITIS\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/patients/15",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "patients",
+            "15"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Patients",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/patients",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "patients"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Patient by Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/patients/5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "patients",
+            "5"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get doctor based on Patient's id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/suggest-doctor?patientId=7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "suggest-doctor"
+          ],
+          "query": [
+            {
+              "key": "patientId",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
