@@ -1,6 +1,7 @@
 package com.shivansh.myapp.controller;
 
 import com.shivansh.myapp.entity.Doctor;
+import com.shivansh.myapp.exception.InvalidCityException;
 import com.shivansh.myapp.exception.NoDoctorFoundException;
 import com.shivansh.myapp.service.DoctorSuggestionService;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,7 @@ public class DoctorSuggestionController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Doctor>> suggestDoctors(@RequestParam Long patientId) throws NoDoctorFoundException {
+    public ResponseEntity<List<Doctor>> suggestDoctors(@RequestParam Long patientId) throws NoDoctorFoundException, InvalidCityException {
         List<Doctor> doctors = doctorSuggestionService.suggestDoctors(patientId);
         return ResponseEntity.ok(doctors);
     }
